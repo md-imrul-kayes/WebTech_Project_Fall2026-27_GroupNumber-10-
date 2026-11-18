@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration - FoodExpress</title>
+    <link rel="stylesheet" href="customer_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FoodExpress</h1>
+        <h2>Customer Registration</h2>
+
+        <form id="customerForm" novalidate onsubmit="return validateForm()">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Example: 01712345678">
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your full delivery address"></textarea>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+
+            <label for="cpassword">Confirm Password:</label>
+            <input type="password" id="cpassword" name="cpassword" placeholder="Enter password again">
+
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the terms and conditions.</label>
+            </div>
+
+            <div id="customerMessage"></div>
+
+            <div class="buttons">
+                <button type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+
+        <a class="back-link" href="../Common/login.html">Back to Login</a>
+    </div>
+
+    <script src="customer_validation.js"></script>
+</body>
+</html>
